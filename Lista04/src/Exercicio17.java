@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Exercicio17 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matriz = new int[3][3];
+        for (int linha = 0; linha < 3; linha++) {
+            for (int coluna = 0; coluna < 3; coluna++) {
+                System.out.print("Linha " + (linha + 1) + ", coluna " + (coluna + 1) + ": ");
+                matriz[linha][coluna] = sc.nextInt();
+            }
+        }
+        System.out.print("Multiplicador: ");
+        int numero = sc.nextInt();
+        for (int[] linha : matriz) {
+            for (int valor : linha) {
+                System.out.printf("%5d", valor * numero);
+            }
+            System.out.println();
+        }
+    }
+}
